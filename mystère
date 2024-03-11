@@ -1,0 +1,8 @@
+Analysons maintenant la complexité de l'algorithme :
+
+La première boucle (indice i) parcourt toutes les lignes de m1. Sa complexité est O(n) si nous considérons n comme le nombre de lignes dans m1.
+La deuxième boucle (indice j) parcourt toutes les colonnes de m2. Sa complexité est O(m) si nous considérons m comme le nombre de colonnes dans m2.
+La troisième boucle (indice k) parcourt toutes les colonnes de m1 (qui est également le nombre de lignes de m2, d'où la condition de compatibilité pour la multiplication). Sa complexité est O(p) si nous considérons p comme le nombre de colonnes dans m1 (et le nombre de lignes dans m2).
+La complexité totale de l'algorithme est donc O(n * m * p) parce que ces boucles sont imbriquées. Pour chaque élément de la nouvelle matrice m, nous effectuons p multiplications et additions, ce qui est fait pour chaque combinaison des lignes de m1 et des colonnes de m2.
+
+En termes du traitement réalisé, la fonction calcule le produit des deux matrices m1 et m2. Pour que la multiplication des matrices soit valide, le nombre de colonnes de la première matrice (m1) doit être égal au nombre de lignes de la deuxième matrice (m2). Si cette condition n'est pas remplie, la fonction affiche une erreur et renvoie False. Si les matrices sont compatibles pour la multiplication, la fonction retourne une nouvelle matrice qui est le résultat de la multiplication de m1 par m2.
